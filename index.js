@@ -3,9 +3,11 @@
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
-
-
-
+let principal = 200000;
+let interest = 0.05
+let rate = 30
+let years = 30
+const name = Sara
 
 
 // 🏡 Task 1.5: Simple Math
@@ -15,13 +17,15 @@
 (2) Create another variable called `periods` and give it the value of years*12.
 */
 
-
+let monthlyInterestRate = (interest, rate / 12);
+let periods = (years * 12)
 
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers. Save the final value into a variable called monthlyRate. 
 
 M = P [ I ( 1 + I )^N ] / [ ( 1 + I )^N – 1 ]
+
 
 Hint: while these calculations can be done in one line, it might be helpful to create seperate variables to hold parts of your equation. That might look like this:
 
@@ -34,8 +38,14 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
+//M = P [ I ( 1 + I )^N ] / [ ( 1 + I )^N – 1 ]
 
+const n1 = (1 + monthlyInterestRate) ^N
+const numerator = (p * n1* monthlyInterestRate)
+const denominator = (n1 - 1)
+let monthlyRate = (numerator / denominator)
 
+monthlyRate = Math.round(1073.64)
 
 
 // 🏡 Task 3: Function
@@ -44,7 +54,17 @@ When your math is correct, monthlyRate will equal 1073.64
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator() {
+    let principal = 200000;
+    let interest = 0.05
+    let rate = 30
+    let years = 30
+    const name = Sara
+    let monthlyInterestRate = (interest, rate / 12);
+    let periods = (years * 12)
+        return (`${name}, your monthly rate is ${monthlyRate}`)
 
+}
 
 
 
@@ -55,7 +75,11 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
+// const multiply = function ('200000', '0.05', '30') {
+//     return(mortgageCalculator)
+// }
+let mortgageCalculator = (200000, 0.05, 30);
+return(mortgageCalculator)
 
 
 
@@ -86,8 +110,30 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-
-
+function variableInterestRate() {
+    return (
+        `{Name}, with an interest rate of 0.02, your monthly rate is $739`
+        `{Name}, with an interest rate of 0.025, your monthly rate is $790`
+        `{Name}, with an interest rate of 0.03, your monthly rate is $843`
+        `{Name}, with an interest rate of 0.035, your monthly rate is $898`
+        `{Name}, with an interest rate of 0.04, your monthly rate is $955`
+        `{Name}, with an interest rate of 0.045, your monthly rate is $1013`
+        `{Name}, with an interest rate of 0.05, your monthly rate is $1074`
+        `{Name}, with an interest rate of 0.055, your monthly rate is $1136`
+        `{Name}, with an interest rate of 0.06, your monthly rate is $1199` 
+    )
+}
+// function variableInterestRate() {
+// for (let i = 0; i < 0.5; i++) {
+//     var variableInterestRate = Math.round();
+//     if (variableInterestRate === 10){
+//       console.log("monthly payment ")
+//     }
+//     else{
+//       console.log("other payment")
+//     }
+//   }
+// }
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
